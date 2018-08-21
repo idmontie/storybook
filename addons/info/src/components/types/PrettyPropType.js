@@ -34,6 +34,10 @@ const PrettyPropType = props => {
     return <span>unknown</span>;
   }
 
+  if (typeof propType === 'string') {
+    return <span>{propType}</span>;
+  }
+  
   const { name } = propType || {};
 
   if (propTypeComponentMap.has(name)) {
